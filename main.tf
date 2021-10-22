@@ -119,4 +119,3 @@ resource "aws_key_pair" "app_server" {
     key_name = "app_server"
     public_key = file("~/.ssh/app_server.pub")
 }
-
