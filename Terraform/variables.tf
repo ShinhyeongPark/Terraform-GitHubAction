@@ -1,20 +1,20 @@
 variable "bastion-rt-subnet" {
     default = [
-        aws_subnet.subnet-bastion-1a,
-        aws_subnet.subnet-bastion-1b
+        "10.80.11.0/24",
+        "10.80.12.0/24"
     ]
 }
 
 variable "webapp-rt-subnet" {
     default = [
-        aws_subnet.subnet-webapp-1a,
-        aws_subnet.subnet-webapp-1b
+        "10.80.21.0/24",
+        "10.80.22.0/24"
     ]
 }
 
-variable "webapp-rds-subnet" {
+variable "rds-rt-subnet" {
     default = [
-        aws_subnet.subnet-rds-1a,
-        aws_subnet.subnet-rds-1b
+        "10.80.31.0/24",
+        "10.80.32.0/24"
     ]
 }

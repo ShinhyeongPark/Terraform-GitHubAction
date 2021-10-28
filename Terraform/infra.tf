@@ -173,38 +173,38 @@ resource "aws_route_table" "rt-lsitc-rds-shpark" {
 #############################################################
 resource "aws_subnet" "subnet-bastion-1a" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.11.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 11)
+    cidr_block = "10.80.11.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 11)
     availability_zone = "us-west-1a"
 }
 resource "aws_subnet" "subnet-bastion-1b" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.12.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 12)
+    cidr_block = "10.80.12.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 12)
     availability_zone = "us-west-1b"
 }
 resource "aws_subnet" "subnet-webapp-1a" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.21.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 21)
+    cidr_block = "10.80.21.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 21)
     availability_zone = "us-west-1a"
 }
 resource "aws_subnet" "subnet-webapp-1b" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.22.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 22)
+    cidr_block = "10.80.22.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 22)
     availability_zone = "us-west-1b"
 }
 resource "aws_subnet" "subnet-rds-1a" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.31.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 31)
+    cidr_block = "10.80.31.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 31)
     availability_zone = "us-west-1a"
 }
-resource "aws_subnet" "subnet-rds-1a" {
+resource "aws_subnet" "subnet-rds-1b" {
     vpc_id = "${aws_vpc.vpc-demo-shpark}"
-    # cidr_block = "10.80.32.0/24"
-    subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 32)
+     cidr_block = "10.80.32.0/24"
+    #subnet = cidrsubnet(aws_vpc.vpc-demo-shpark, 8, 32)
     availability_zone = "us-west-1b"
 }
 
@@ -222,5 +222,5 @@ resource "aws_route_table_association" "rt-webapp-shpark-association" {
 }
 resource "aws_route_table_association" "rt-rds-shpark-association" {
     route_table_id = aws_route_table.rt-lsitc-rds-shpark.id
-    subnet_id = var.webapp-rds-subnet
+    subnet_id = var.rds-rt-subnet
 }
