@@ -129,3 +129,4 @@ resource "aws_internet_gateway" "igw-bastion-1a-shpark" {
     }
 }
 
+
