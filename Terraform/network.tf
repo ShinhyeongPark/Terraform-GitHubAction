@@ -17,6 +17,7 @@ resource "aws_internet_gateway" "igw-bastion-1a-shpark" {
 #             [NAT]
 #############################################################
 resource "aws_eip" "eip-bastion-shpark" {
+    count = 1
     vpc = true
 }
 

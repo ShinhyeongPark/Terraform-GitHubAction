@@ -22,6 +22,5 @@ terraform {
 
 #가용 리전 정의
 provider "aws" {
-    profile = "default"
     region = "us-west-2"
 }
