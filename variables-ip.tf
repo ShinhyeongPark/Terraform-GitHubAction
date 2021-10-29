@@ -3,5 +3,5 @@
 # }
 
 variable "company_ip" {
-    default = "211.168.91.10/32"
+    default = "secret"
 }
