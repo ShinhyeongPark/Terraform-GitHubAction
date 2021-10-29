@@ -99,36 +99,16 @@ variable "subnet_db_tags" {
     }
 }
 
-# variable "subnet_suffix_public" {
-#     default = {
-#         Name = "subnet-wp-public"
-#     }
-# }
-
-# variable "subnet_suffix_private" {
-#     default = {
-#         Name = "subnet-wp-private"
-#     }
-# }
-
-# variable "subnet_suffix_db" {
-#     default = {
-#         Name = "subnet-wp-db"
-#     }
-# }
-
-# Subnet names 설정
-variable "public_subnets_suffix" {
-  default = "singa-snet-public-wp-inhyo"
-
+variable "subnet_suffix_public" {
+    default = "subnet-wp-public"
 }
 
-variable "private_subnets_suffix" {
-  default = "singa-snet-private-wp-inhyo"
+variable "subnet_suffix_private" {
+    default = "subnet-wp-private"
 }
 
-variable "intra_subnets_suffix" {
-  default = "singa-snet-intra-wp-inhyo"
+variable "subnet_suffix_intra" {
+    default = "subnet-wp-intra"
 }
 
 variable "enable_dns_host" {

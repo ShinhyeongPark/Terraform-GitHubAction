@@ -28,14 +28,10 @@ module "vpc" {
     enable_dns_hostnames = var.enable_dns_host
     enable_dns_support = var.enable_dns_support
 
-    # public_subnet_suffix = var.subnet_suffix_public
-    # private_subnet_suffix = var.subnet_suffix_private
-    # intra_subnet_suffix = var.subnet_suffix_db
+    public_subnet_suffix = var.subnet_suffix_public
+    private_subnet_suffix = var.subnet_suffix_private
+    intra_subnet_suffix = var.subnet_suffix_intra
     
-    public_subnet_suffix  = var.public_subnets_suffix
-    private_subnet_suffix = var.private_subnets_suffix
-    intra_subnet_suffix   = var.intra_subnets_suffix
-
     vpc_tags = var.vpc_tags
     igw_tags = var.igw_tags
     nat_eip_tags = var.nat_eip_tags
