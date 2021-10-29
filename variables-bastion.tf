@@ -17,7 +17,7 @@ variable "bastion_name" {
 }
 
 variable "bastion_ami" {
-    default = "ami-0c07cd0ceb5369def"
+    default = "ami-03d5c68bab01f3496"
 }
 
 variable "bastion_instance_type" {
