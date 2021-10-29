@@ -99,22 +99,36 @@ variable "subnet_db_tags" {
     }
 }
 
-variable "subnet_suffix_public" {
-    default = {
-        Name = "subnet-wp-public"
-    }
+# variable "subnet_suffix_public" {
+#     default = {
+#         Name = "subnet-wp-public"
+#     }
+# }
+
+# variable "subnet_suffix_private" {
+#     default = {
+#         Name = "subnet-wp-private"
+#     }
+# }
+
+# variable "subnet_suffix_db" {
+#     default = {
+#         Name = "subnet-wp-db"
+#     }
+# }
+
+# Subnet names 설정
+variable "public_subnets_suffix" {
+  default = "singa-snet-public-wp-inhyo"
+
 }
 
-variable "subnet_suffix_private" {
-    default = {
-        Name = "subnet-wp-private"
-    }
+variable "private_subnets_suffix" {
+  default = "singa-snet-private-wp-inhyo"
 }
 
-variable "subnet_suffix_db" {
-    default = {
-        Name = "subnet-wp-db"
-    }
+variable "intra_subnets_suffix" {
+  default = "singa-snet-intra-wp-inhyo"
 }
 
 variable "enable_dns_host" {
@@ -124,25 +138,3 @@ variable "enable_dns_host" {
 variable "enable_dns_support" {
     default = true
 }
-
-
-# variable "bastion-rt-subnet" {
-#     default = [
-#         "10.80.11.0/24",
-#         "10.80.12.0/24"
-#     ]
-# }
-
-# variable "webapp-rt-subnet" {
-#     default = [
-#         "10.80.21.0/24",
-#         "10.80.22.0/24"
-#     ]
-# }
-
-# variable "rds-rt-subnet" {
-#     default = [
-#         "10.80.31.0/24",
-#         "10.80.32.0/24"
-#     ]
-# }

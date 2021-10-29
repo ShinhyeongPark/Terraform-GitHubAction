@@ -13,37 +13,39 @@ module "vpc" {
 
     name = var.vpc_name
     cidr = var.vpc_cidr_block
-    az = ["${var.region}a","${var.region}b"]
-    public_subnet = var.public_subnet
-    private_subnet = var.private_subnet
-    db_subnet = var.db_subnet
+    azs = ["${var.region}a","${var.region}b"]
+    public_subnets = var.public_subnet
+    private_subnets = var.private_subnet
+    intra_subnets = var.db_subnet
 
-    nat_gateway_single = var.nat_gateway_single
-    nat_gateway_enable = var.nat_gateway_enable
-    nat_gateway_one_per_az = var.nat_gateway_one_per_az
-    nat_gateway_ips_reuse = var.nat_gateway_ips_reuse
+    single_nat_gateway = var.nat_gateway_single
+    enable_nat_gateway = var.nat_gateway_enable
+    one_nat_gateway_per_az = var.nat_gateway_one_per_az
+    reuse_nat_ips = var.nat_gateway_ips_reuse
 
     external_nat_ip_ids = aws_eip.nat.*.id
 
-    enable_dns_host = var.enable_dns_host
+    enable_dns_hostnames = var.enable_dns_host
     enable_dns_support = var.enable_dns_support
+
+    # public_subnet_suffix = var.subnet_suffix_public
+    # private_subnet_suffix = var.subnet_suffix_private
+    # intra_subnet_suffix = var.subnet_suffix_db
+    
+    public_subnet_suffix  = var.public_subnets_suffix
+    private_subnet_suffix = var.private_subnets_suffix
+    intra_subnet_suffix   = var.intra_subnets_suffix
 
     vpc_tags = var.vpc_tags
     igw_tags = var.igw_tags
     nat_eip_tags = var.nat_eip_tags
     nat_gateway_tags = var.nat_gateway_tags
 
-    subnet_suffix_public = var.subnet_suffix_public
-    subnet_suffix_private = var.subnet_suffix_private
-    subnet_suffix_db = var.subnet_suffix_db
+    public_route_table_tags = var.route_table_public_tags
+    private_route_table_tags = var.route_table_private_tags
+    intra_route_table_tags = var.route_table_db_tags
 
-    route_table_public_tags = var.route_table_public_tags
-    route_table_private_tags = var.route_table_private_tags
-    route_table_db_tags = var.route_table_db_tags
-
-    subnet_public_tags = var.subnet_public_tags
-    subnet_private_tags = var.subnet_private_tags
-    subnet_db_tags = var.subnet_db_tags
-
-
+    public_subnet_tags = var.subnet_public_tags
+    private_subnet_tags = var.subnet_private_tags
+    intra_subnet_tags = var.subnet_db_tags
 }
