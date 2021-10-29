@@ -1,6 +1,6 @@
 resource "aws_key_pair" "wordpress-bastion-shpark" {
     key_name = "bastion-key"
-    public = var.bastion_keypair
+    public_key = var.bastion_keypair
 }
 
 resource "aws_eip_association" "eip_associ_shpark" {
@@ -19,7 +19,8 @@ module "bast_sg" {
     name = var.bastion_sg_name
     vpc_id = module.vpc.vpc_id
     
-    ingress_cidr_blocks = [var.home_ip, var.company_ip]
+    # ingress_cidr_blocks = [var.home_ip, var.company_ip]
+    ingress_cidr_blocks = [var.company_ip]
     ingress_rules       = ["ssh-tcp"]
     egress_rules        = ["all-all"]
 
