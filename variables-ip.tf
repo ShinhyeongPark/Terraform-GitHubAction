@@ -1,7 +1,7 @@
-variable "home_ip" {
-    default = "secret"
-}
+# variable "home_ip" {
+#     default = "secret"
+# }
 
 variable "company_ip" {
-    default = "secret"
+    default = "211.168.91.10/32"
 }
