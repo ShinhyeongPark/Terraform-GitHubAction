@@ -11,10 +11,9 @@ variable "vpc_cidr_block" {
 }
 
 variable "vpc_tags" {
-  default = {
-    Name = "vpc-shpark"
-  }
-
+    default = {
+        Name = "vpc-shpark"
+    }
 }
 
 variable "public_subnet" {
@@ -37,31 +36,31 @@ variable "igw_tags" {
 
 variable "nat_eip_tags" {
     default = {
-        Name = eip-shpark
+        Name = "eip-shpark"
     }
 }
 
 variable "nat_gateway_tags" {
     default = {
-        Name = 
+        Name = "nat-gateway-shpark"
     }
 }
 
 # NAT 게이트웨이 관련 설정
 variable "nat_gateway_single" {
-  default = true
+    default = true
 }
 
 variable "nat_gateway_enable" {
-  default = true
+    default = true
 }
 
 variable "nat_gateway_one_per_az" {
-  default = false
+    default = false
 }
 
 variable "nat_gateway_ips_reuse" {
-  default = true
+    default = true
 }
 
 variable "route_table_public_tags" {
@@ -107,6 +106,8 @@ variable "enable_dns_host" {
 variable "enable_dns_support" {
     default = true
 }
+
+
 # variable "bastion-rt-subnet" {
 #     default = [
 #         "10.80.11.0/24",
