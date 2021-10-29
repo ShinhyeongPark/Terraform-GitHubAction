@@ -3,7 +3,7 @@ resource "aws_key_pair" "wordpress-bastion-shpark" {
     public = var.bastion_keypair
 }
 
-resoure "aws_eip_association" "eip_associ_shpark" {
+resource "aws_eip_association" "eip_associ_shpark" {
     instance_id = module.bastion_ec2.id
     allocation_id = aws_eip.bast_eip_shpark.id
 }
