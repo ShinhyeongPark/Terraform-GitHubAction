@@ -81,21 +81,39 @@ variable "route_table_db_tags" {
     }
 }
 
-variable "public_subnet_tags" {
+variable "subnet_public_tags" {
     default = {
         Name = "subnet-public-shpark"
     }
 }
 
-variable "private_subnet_tags" {
+variable "subnet_private_tags" {
     default = {
         Name = "subnet-private-shpark"
     }
 }
 
-variable "db_subnet_tags" {
+variable "subnet_db_tags" {
     default = {
         Name = "subnet-db-shpark"
+    }
+}
+
+variable "subnet_suffix_public" {
+    default = {
+        Name = "subnet-wp-public"
+    }
+}
+
+variable "subnet_suffix_private" {
+    default = {
+        Name = "subnet-wp-private"
+    }
+}
+
+variable "subnet_suffix_db" {
+    default = {
+        Name = "subnet-wp-db"
     }
 }
 
