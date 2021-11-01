@@ -12,7 +12,7 @@ resource "aws_eip" "bast_eip_shpark" {
   vpc = true
 }
 
-module "bast_sg" {
+module "bastion_sg" {
     source = "terraform-aws-modules/security-group/aws"
     version = "~> 4.0"
 
@@ -34,7 +34,7 @@ module "bastion_ec2" {
     ami                         = var.bastion_ami                                      # ubuntu 20.04 이미지
     instance_type               = var.bastion_instance_type                            # 인스턴스 유형
     key_name                    = aws_key_pair.wordpress-bastion-shpark.key_name # 위에서 만든 키 이름
-    vpc_security_group_ids      = [module.bast_sg.security_group_id]                   # 위에서 생성한 security group 모듈의 id
+    vpc_security_group_ids      = [module.bastion_sg.security_group_id]                   # 위에서 생성한 security group 모듈의 id
     subnet_id                   = element(module.vpc.public_subnets, 0)                # vpc 모듈 public subnet 첫 번째 원소 10.70.11.0/24
     availability_zone           = element(module.vpc.azs, 0)                           # vpc 모듈 가용영역 속성의 첫 번째 값 1a
     associate_public_ip_address = true                                                 # public ip 할당 허용
