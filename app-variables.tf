@@ -1,4 +1,4 @@
-variable "app_key" {
+variable "app_keypair" {
     default = "secret"
 }
 
