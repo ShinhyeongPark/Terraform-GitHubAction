@@ -7,6 +7,22 @@
 
 > Terraform을 사용하여 AWS에 Wordpress 구축하는 Side Project입니다. 또한 테라폼에서 지원하는 모듈들을 사용했으며, GitHub Actions로 CI/CD를 구성했습니다.
 
+## AWS Infrastructure
+![Untitled](https://user-images.githubusercontent.com/57867611/139794226-6c5399ec-570f-47cb-928c-1987240ed6b3.png)
+1. 새로운 VPC 생성 (10.80.0.0/16)
+2. VPC 내부에 Subnet 분리 (us-east-1a 3개, us-east-1b 3개)
+3. 이중화 구성 (us-east-1a, us-east-1b)
+4. 실제 App은 인터넷 게이트웨이와 통신을 못하도록 Private하게 구성하며, Bastion 서버를 통해서만 접근이 가능
+5. NAT(Network Address Translation)를 통해 Bastion Public Server와 App Private Server 간 통신을 구현
+6. RDS도 App과 같이 Private하게 구축하여 보안을 강화
+7. Application(여기서는 Wordpress)이 구축이 완료되면, ALB(Application Load Balancer)를 통해 App Server와 인터넷 통신이 가능하도록 설정
+
+## Application Diagram
+![image](https://user-images.githubusercontent.com/57867611/139794466-5802fd65-5201-4a04-992b-99e179729cf3.png)
+
+> Docker Compose를 통해 Docker Container (Wordpress가 동작)를 관리 <br/>
+> Wordpress, MySQL 이미지를 통해서 Wordpress 설치, RDS 연결
+
 ## Learn
 > 이 프로젝트를 수행하기 위해서 아래 사이트를 참고하고 실습을 진행했습니다.
 1. [Terraform을 사용한 AWS 인프라 구축](https://learn.hashicorp.com/collections/terraform/aws-get-started)
@@ -17,18 +33,19 @@
 ## Prerequisites
 위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
 1. Terraform CLI
-2. AWS Account
+2. [AWS Account](https://aws.amazon.com/ko/console/)
 3. AWS CLI
 4. AWS Credentials (IAM)
-5. Terraform Cloud Account
+5. [Terraform Cloud Account](https://www.terraform.io/cloud)
 6. Docker
 7. Docker Compose
-8. GitHub Account
+8. [GitHub Account](https://github.com/)
 
 ## Reference
 > Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
 
 - [Terraform으로 인프라 자동화](https://www.notion.so/Terraform-69f91597baa042f1a90a45e0b8dcf899)
+- [Terraform GitHub Actions: CI/CD 구성](https://www.notion.so/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
 ## Public Key 등록
 1. 먼저 키를 생성한다. (bastion, app, db)
 ```bash
