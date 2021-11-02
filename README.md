@@ -61,8 +61,8 @@
 ## 💡 Reference
 ### Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
 
-- [Terraform으로 인프라 자동화](https://www.notion.so/Terraform-69f91597baa042f1a90a45e0b8dcf899)
-- [Terraform GitHub Actions: CI/CD 구성](https://www.notion.so/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
+- [Terraform으로 인프라 자동화](https://peppermint-waxflower-244.notion.site/Terraform-69f91597baa042f1a90a45e0b8dcf899)
+- [Terraform GitHub Actions: CI/CD 구성](https://peppermint-waxflower-244.notion.site/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
 
 <br/>
 
