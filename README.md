@@ -1,5 +1,5 @@
 <h1 align="center">Infrastructure Automation <br/>with Terraform and GitHub Actions</h1>
-<p>
+<p align="center">
   <a href="https://github.com/PARKINHYO/WordPress-Terraform">
     <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   </a> 
