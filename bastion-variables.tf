@@ -13,7 +13,7 @@ variable "bastion_sg_tag" {
 }
 
 variable "bastion_name" {
-    default = "wordpress-bastion-shpark"
+    default = "bastion-shpark"
 }
 
 variable "bastion_ami" {
@@ -30,6 +30,6 @@ variable "bastion_private_ip" {
 
 variable "bastion_tags" {
     default = {
-        Name = "wordpress-bastion-shpark"
+        Name = "bastion-shpark"
     }
 }
