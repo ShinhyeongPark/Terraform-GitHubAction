@@ -1,8 +1,11 @@
 <h1 align="center">Infrastructure Automation <br/>with Terraform and GitHub Actions</h1>
 <p>
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
+  <a href="https://github.com/PARKINHYO/WordPress-Terraform">
+    <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  </a> 
+  <a href="https://github.com/ShinhyeongPark/Terraform-GitHubAction/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" />
+  </a>  
 </p>
 
 > Terraform을 사용하여 AWS에 Wordpress 구축하는 Side Project입니다. 또한 테라폼에서 지원하는 모듈들을 사용했으며, GitHub Actions로 CI/CD를 구성했습니다.
@@ -24,14 +27,14 @@
 > Wordpress, MySQL 이미지를 통해서 Wordpress 설치, RDS 연결
 
 ## Learn
-> 이 프로젝트를 수행하기 위해서 아래 사이트를 참고하고 실습을 진행했습니다.
+###  이 프로젝트를 수행하기 위해서 아래 사이트를 참고하고 실습을 진행했습니다.
 1. [Terraform을 사용한 AWS 인프라 구축](https://learn.hashicorp.com/collections/terraform/aws-get-started)
 2. [Terraform을 사용한 Docker 인프라 구축](https://learn.hashicorp.com/collections/terraform/docker-get-started)
 3. [Terraform GitHub Actions 튜토리얼](https://learn.hashicorp.com/tutorials/terraform/github-actions)
 4. [Terraform Documents](https://www.terraform.io/docs/index.html)
 
 ## ⭐️ Prerequisites
-위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
+### 위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
 1. Terraform CLI
 2. [AWS Account](https://aws.amazon.com/ko/console/)
 3. AWS CLI
@@ -42,7 +45,7 @@
 8. [GitHub Account](https://github.com/)
 
 ## Reference
-> Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
+### Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
 
 - [Terraform으로 인프라 자동화](https://www.notion.so/Terraform-69f91597baa042f1a90a45e0b8dcf899)
 - [Terraform GitHub Actions: CI/CD 구성](https://www.notion.so/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
