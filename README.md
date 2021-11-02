@@ -1,4 +1,4 @@
-<h1 align="center">Infrastructure Automation with Terraform and GitHub Action 👋</h1>
+<h1 align="center">Infrastructure Automation <br/>with Terraform and GitHub Actions</h1>
 <p>
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -30,7 +30,7 @@
 3. [Terraform GitHub Actions 튜토리얼](https://learn.hashicorp.com/tutorials/terraform/github-actions)
 4. [Terraform Documents](https://www.terraform.io/docs/index.html)
 
-## Prerequisites
+## ⭐️ Prerequisites
 위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
 1. Terraform CLI
 2. [AWS Account](https://aws.amazon.com/ko/console/)
@@ -48,9 +48,10 @@
 - [Terraform GitHub Actions: CI/CD 구성](https://www.notion.so/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
 ## Public Key 등록
 1. 먼저 키를 생성한다. (bastion, app, db)
-```bash
-ssh-keygen -t rsa -b 4096 -N "" -f [이름]-key #이름-key 형식으로 지정
-```
+
+    ```bash
+    ssh-keygen -t rsa -b 4096 -N "" -f [이름]-key #이름-key 형식으로 지정
+    ```
 2. 키가 생성되면 cat 명령어로 키의 데이터를 복사(ctrl+c)한다.
 3. [Terraform Cloud](https://www.terraform.io/cloud) 접속
 4. 로그인 한 후 현재 작업중인 organization의 workspace로 이동한다.
@@ -64,12 +65,10 @@ ssh-keygen -t rsa -b 4096 -N "" -f [이름]-key #이름-key 형식으로 지정
 
 👤 **Shinhyeong Park**
 
-* Website: https://github.com/ShinhyeongPark
-* Github: [@Shinhyeong Park](https://github.com/Shinhyeong Park)
+* Github: https://github.com/ShinhyeongPark
+* Velog: [@Shinhyeong Park](https://velog.io/@orpsh1941)
+* Email: orpsh1941@gmail.com
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
