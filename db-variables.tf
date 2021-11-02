@@ -24,7 +24,7 @@ variable "db_ssh_sg_name" {
 }
 
 
-variable "db_ssh_sh_cidr_blocks" {
+variable "db_ssh_sg_cidr_blocks" {
     default = [
         "10.80.11.11/32",
         "10.80.21.0/24",
