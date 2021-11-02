@@ -5,12 +5,16 @@
   </a> 
   <a href="https://github.com/ShinhyeongPark/Terraform-GitHubAction/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" />
-  </a>  
+  </a>
+  <a href="https://github.com/ShinhyeongPark/Terraform-GitHubAction/actions/workflows/terraform.yml" target="_blank"><img src="https://github.com/ShinhyeongPark/Terraform-GitHubAction/actions/workflows/terraform.yml/badge.svg?branch=main">
+  </a>
 </p>
 
 > Terraform을 사용하여 AWS에 Wordpress 구축하는 Side Project입니다. 또한 테라폼에서 지원하는 모듈들을 사용했으며, GitHub Actions로 CI/CD를 구성했습니다.
 
-## AWS Infrastructure
+<br/>
+
+## ⚙ AWS Infrastructure
 ![Untitled](https://user-images.githubusercontent.com/57867611/139794226-6c5399ec-570f-47cb-928c-1987240ed6b3.png)
 1. 새로운 VPC 생성 (10.80.0.0/16)
 2. VPC 내부에 Subnet 분리 (us-east-1a 3개, us-east-1b 3개)
@@ -20,18 +24,26 @@
 6. RDS도 App과 같이 Private하게 구축하여 보안을 강화
 7. Application(여기서는 Wordpress)이 구축이 완료되면, ALB(Application Load Balancer)를 통해 App Server와 인터넷 통신이 가능하도록 설정
 
-## Application Diagram
+<br/>
+
+## 📌 Application Diagram
 ![image](https://user-images.githubusercontent.com/57867611/139794466-5802fd65-5201-4a04-992b-99e179729cf3.png)
 
 > Docker Compose를 통해 Docker Container (Wordpress가 동작)를 관리 <br/>
 > Wordpress, MySQL 이미지를 통해서 Wordpress 설치, RDS 연결
 
-## Learn
+<br/>
+
+## 📖 Learn
 ###  이 프로젝트를 수행하기 위해서 아래 사이트를 참고하고 실습을 진행했습니다.
 1. [Terraform을 사용한 AWS 인프라 구축](https://learn.hashicorp.com/collections/terraform/aws-get-started)
 2. [Terraform을 사용한 Docker 인프라 구축](https://learn.hashicorp.com/collections/terraform/docker-get-started)
 3. [Terraform GitHub Actions 튜토리얼](https://learn.hashicorp.com/tutorials/terraform/github-actions)
 4. [Terraform Documents](https://www.terraform.io/docs/index.html)
+5. [Terraform Registry](https://registry.terraform.io/)
+6. [Terraform Module Source Code](https://github.com/terraform-aws-modules)
+
+<br/>
 
 ## ⭐️ Prerequisites
 ### 위의 학습 자료(튜토리얼)을 수행하면 Prereqisites를 충족시킬 수 있습니다.
@@ -44,12 +56,20 @@
 7. Docker Compose
 8. [GitHub Account](https://github.com/)
 
-## Reference
+<br/>
+
+## 💡 Reference
 ### Learn에서 수행한 실습과 Prerequisites를 준비하는 과정들을 노션에 정리했으니 참고해주세요.
 
 - [Terraform으로 인프라 자동화](https://www.notion.so/Terraform-69f91597baa042f1a90a45e0b8dcf899)
 - [Terraform GitHub Actions: CI/CD 구성](https://www.notion.so/Github-Actions-with-Terraform-730b8c97f9724fe498664070a7e675de)
+
+<br/>
+
 ## Public Key 등록
+**미리 말하자면, 생성한 키는 .gitignore에 반드시 등록**
+<br/>
+제가 작성한 [.gitignore](https://github.com/ShinhyeongPark/Terraform-GitHubAction/blob/main/.gitignore)을 보면 인스터스 키뿐만 아니라 .terraform도 추가했습니다. (용량 문제로 Push가 안되더라구요😨)
 1. 먼저 키를 생성한다. (bastion, app, db)
 
     ```bash
@@ -64,7 +84,9 @@
 6. 키 등록 후 화면
 ![sdsdsd](https://user-images.githubusercontent.com/57867611/139789401-3ac10487-c07b-44d2-a92e-54224d1d9bc7.png)
 
-## Author
+<br/>
+
+## 🦸‍♂️ Author
 
 👤 **Shinhyeong Park**
 
