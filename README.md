@@ -10,7 +10,7 @@
   </a>
 </p>
 
-> Terraform을 사용하여 AWS에 Wordpress 구축하는 Side Project입니다. 또한 테라폼에서 지원하는 모듈들을 사용했으며, GitHub Actions로 CI/CD를 구성했습니다.
+> Terraform을 사용하여 AWS에 Wordpress로 구축한 팀 블로그 PJT 입니다. <br/>또한 Terraform에서 지원하는 모듈들을 사용했으며,GitHub Actions로 CI/CD를 구성했습니다.
 
 <br/>
 
